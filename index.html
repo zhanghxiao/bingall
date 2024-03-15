@@ -477,6 +477,40 @@
       </div>
     </div>
   </div>
+		 <!-- 添加模态弹窗 -->
+  <div id="announceModal" class="fixed inset-0 z-50 overflow-auto bg-opacity-75 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg p-6 max-w-md mx-auto">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-semibold">公告</h3>
+        <button class="text-gray-500 hover:text-gray-700" id="closeAnnounce">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <p id="announceContent">这里是您预置的公告内容。</p>
+    </div>
+  </div>
 </body>
+<script>
+    // 获取模态弹窗和关闭按钮元素
+    const announceModal = document.getElementById('announceModal');
+    const closeAnnounce = document.getElementById('closeAnnounce');
 
+    // 显示模态弹窗
+    function showAnnounceModal() {
+      announceModal.classList.remove('hidden');
+    }
+
+    // 隐藏模态弹窗
+    function hideAnnounceModal() {
+      announceModal.classList.add('hidden');
+    }
+
+    // 监听关闭按钮点击事件
+    closeAnnounce.addEventListener('click', hideAnnounceModal);
+
+    // 页面加载时显示公告弹窗
+    window.addEventListener('load', showAnnounceModal);
+  </script>
 </html>
