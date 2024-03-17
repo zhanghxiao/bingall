@@ -518,6 +518,17 @@
             </ul>
           </div>
         </div>
+					 <div id="mobile-waline-container" class="hidden md:hidden">
+        <div id="mobile-waline"></div>
+        <script type="module">
+          import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+          init({
+            el: '#mobile-waline',
+            serverURL: 'https://note.xiao-chat-gpt.icu',
+          });
+        </script>
+      </div>
       </div>
     </div>
   </div>
@@ -539,17 +550,6 @@
 	<p id="announceContent1" class="announce-content1">2024/3/16</p>
 	
     </div>
-      <div id="mobile-waline-container" class="hidden md:hidden">
-        <div id="mobile-waline"></div>
-        <script type="module">
-          import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
-
-          init({
-            el: '#mobile-waline',
-            serverURL: 'https://note.xiao-chat-gpt.icu',
-          });
-        </script>
-      </div>
     </div>
   </div>
 </div>
