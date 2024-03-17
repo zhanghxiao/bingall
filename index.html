@@ -46,9 +46,24 @@
       font-size: 12px; /* 调整公告内容的字体大小 */
     }
   </style>
+	<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
 </head>
-
 <body>
+  <div style="display: flex;">
+    <div style="width: 30%; padding-right: 16px;">
+      <div id="waline"></div>
+      <script type="module">
+        import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+        init({
+          el: '#waline',
+          serverURL: 'https://note.xiao-chat-gpt.icu',
+        });
+      </script>
+    </div>
+    <div style="width: 70%;">
+      <!-- 这里放置主体内容 -->
+
   <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 px-4 sm:py-12">
     <div class="absolute inset-0 bg-slate-100 bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]">
     </div>
@@ -514,6 +529,9 @@
 	<p id="announceContent1" class="announce-content1">2024/3/16</p>
 	
     </div>
+  </div>
+
+	    </div>
   </div>
 </body>
 <script>
