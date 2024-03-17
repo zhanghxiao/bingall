@@ -49,6 +49,10 @@
   #waline-container {
     display: none;
   }
+  #mobile-waline-container {
+    display: block;
+  }
+}
 }
   </style>
 	<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
@@ -59,10 +63,7 @@
   </div>
   <div class="flex flex-col md:flex-row">
     <div class="md:w-2/5 md:pr-0 md:pt-16">
-      <button id="toggle-waline" class="block md:hidden bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">
-        切换评论区
-      </button>
-      <div id="waline-container" class="hidden md:block">
+      <div id="waline-container" class="block md:block">
         <div id="waline"></div>
         <script type="module">
           import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
@@ -538,10 +539,20 @@
 	<p id="announceContent1" class="announce-content1">2024/3/16</p>
 	
     </div>
-  </div>
+      <div id="mobile-waline-container" class="hidden md:hidden">
+        <div id="mobile-waline"></div>
+        <script type="module">
+          import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
 
-	    </div>
+          init({
+            el: '#mobile-waline',
+            serverURL: 'https://note.xiao-chat-gpt.icu',
+          });
+        </script>
+      </div>
+    </div>
   </div>
+</div>
 </body>
 <script>
     // 获取模态弹窗和关闭按钮元素
