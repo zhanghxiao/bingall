@@ -83,14 +83,6 @@
         <div class="flex justify-center">
           <img src="/frontend/public/img/logo.svg" class="h-24" alt="BingAI" />
         </div>
-<!--         <div class="mt-6 text-center text-3xl text-gray-600">聊天服务器已部署完成，别死磕同一个站点，别自作主张给别人</div>
-	      <p>如果连接失败，请多刷新尝试几次，不行就更换站点或者质疑一下自己的网络连接并更换更好的网络连接；
-如果页面消失请及时告知我</p> -->
-	<!-- <div class="mt-6 text-center text-3xl text-gray-600">聊天服务器已部署完成，v1站点可用并且在edge浏览器中可以直接使用语音交互，v3站点Gemini模型以及其余模式均可用，v5站点重新接入copilot选择Creative-g4t模型即可使用，其余仍然在抢修</div>
-	      <p>(Ps:别™给我随便举报行么🤨，一没广告二不收费，举报后站点就不能用了好吧，就算误触也看仔细点😑)</p> -->
-          <!--<div class="mt-6 text-center text-3xl text-gray-600">聊天服务器已部署完成，因为托管网站的账号被封了两个😥所以v1，v2在抢修、暂停使用😵，v3站点与v4站点可以正常使用，v1站点暂时抢修成功，正在测试</p>-->
-<!-- 	      <div class="mt-6 text-center text-3xl text-gray-600">聊天服务器已部署完成，站点全部抢修成功,全面复活正在测试（除了v2，又崩了），暂时可以正常使用，PS:别再给我举报了，一没收钱二没广告的</p>
-        <div class="divide-y divide-gray-300/50"> -->
 		 <div class="mt-6 text-center text-3xl text-gray-600">聊天服务器已部署完成</p>
         <div class="divide-y divide-gray-300/50">
 	        <div class="mt-6 text-center text-2xl text-gray-600">站点除v2以外全部可用，v3/v5/v6/v7请自主切换模型，gpt3.5额度为5$额度有限，请尽量切换其他模型
@@ -99,39 +91,6 @@
         <div class="divide-y divide-gray-300/50">
           <div class="space-y-6 py-8 text-base leading-7 text-gray-600">
             <ul class="space-y-4">
-<!--               <li class="flex items-center">
-                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="11" />
-                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
-                </svg>
-          <div class="pt-8 text-base font-semibold leading-7">
-	<br/>
-	<br/>
-            <p class="text-gray-600 overflow-hidden">站点v1-1：<a href="https://mistpe-go-proxy-bingai.hf.space/"
-                target="_blank"
-                class="text-sky-500 hover:text-sky-600">点击访问</a></p>
-                
-          </div>
-
-              </li>
-	              <li class="flex items-center">
-                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="11" />
-                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
-                </svg>
-          <div class="pt-8 text-base font-semibold leading-7">
-	<br/>
-	<br/>
-            <p class="text-gray-600 overflow-hidden">站点v1-2：<a href="https://mistpe-go-proxy-bingai2.hf.space/"
-                target="_blank"
-                class="text-sky-500 hover:text-sky-600">点击访问</a></p>
-                
-          </div>
-
-              </li>
- -->
 
 
  <ul class="grid grid-cols-2 gap-4">
@@ -518,7 +477,8 @@
             </ul>
           </div>
         </div>
-					 <div id="mobile-waline-container" class="hidden md:hidden">
+	<div id="mobile-waline-container" class="hidden md:hidden">
+		<h3>欢迎评论</h3>
         <div id="mobile-waline"></div>
         <script type="module">
           import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
@@ -575,12 +535,4 @@
     // 页面加载时显示公告弹窗
     window.addEventListener('load', showAnnounceModal);
   </script>
-<script>
-	const toggleWaline = document.getElementById('toggle-waline');
-const walineContainer = document.getElementById('waline-container');
-
-toggleWaline.addEventListener('click', () => {
-  walineContainer.classList.toggle('hidden');
-});
-</script>
 </html>
